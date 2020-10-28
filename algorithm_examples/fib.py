@@ -1,7 +1,12 @@
+#Recursion Example
+
 def fib(n):
     if n < 2:
         return n
     return fib(n-1) + fib(n-2)
+
+
+#Dynamic Programming Example - (Memoization)
 
 def fib2(n):
     m = {0:0,1:1}
@@ -9,6 +14,7 @@ def fib2(n):
         m[n] = fib2(n-1) + fib2(n-2)
     return m[n]
 
+#Dynamic Programming Example - Space Saving Method
 def fib3(n):
     if n == 0:
         return n

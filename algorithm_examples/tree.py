@@ -119,9 +119,9 @@ def inorderTraversal(root):
 
 print(inorderTraversal(root))
                                                                                   
-def solve(root, depth = 0):
+def treedepth(root, depth = 0):
     if root == None:
         return depth
-    return max(solve(root.left, depth + 1), solve(root.right, depth +1))
+    return max(treedepth(root.left, depth + 1), treedepth(root.right, depth +1))
 
-print(solve(root))
+print(treedepth(root))
